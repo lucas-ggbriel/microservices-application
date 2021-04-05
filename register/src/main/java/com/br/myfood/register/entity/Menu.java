@@ -1,6 +1,7 @@
 package com.br.myfood.register.entity;
 
 import com.br.myfood.register.dto.MenuDto;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.modelmapper.ModelMapper;
 
@@ -16,7 +17,7 @@ public class Menu {
     private long id;
     private String name;
     private Double price;
-
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     private Restaurant restaurant;
 

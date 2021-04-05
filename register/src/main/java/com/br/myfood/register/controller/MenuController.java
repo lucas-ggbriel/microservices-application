@@ -30,8 +30,9 @@ public class MenuController {
     @PostMapping("/insert")
     public ResponseEntity insertClient(@RequestBody MenuDto menuDto) {
         try {
-          return  menuService.insertMenu(menuDto) != null ?
-                  ResponseEntity.ok(menuService.insertMenu(menuDto)):
+            Menu menu = menuService.insertMenu(menuDto);
+          return  menu != null ?
+                  ResponseEntity.ok(menu):
                   ResponseEntity.badRequest().build();
         } catch (Exception e) {
             System.out.println(e);
