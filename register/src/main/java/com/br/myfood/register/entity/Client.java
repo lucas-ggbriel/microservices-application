@@ -2,7 +2,6 @@ package com.br.myfood.register.entity;
 
 import com.br.myfood.register.dto.ClientDto;
 import lombok.Data;
-import lombok.Generated;
 import org.modelmapper.ModelMapper;
 
 import javax.persistence.*;
