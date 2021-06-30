@@ -1,4 +1,4 @@
-package com.br.myfood.register.configuration;
+package com.oder.order.configuration;
 
 import org.springframework.amqp.core.Exchange;
 import org.springframework.amqp.core.ExchangeBuilder;
