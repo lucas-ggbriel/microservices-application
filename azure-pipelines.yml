@@ -23,6 +23,20 @@ stages:
         displayName: 'Running first script'
 
       - script: |
-          echo echo this is the finish of this pipeline.
+          echo this is the finish of this pipeline.
         displayName: 'Running second script'
         
+- stage: "runningSecondStageFromAPipe"
+  displayName: 'Microservice Build & Validation'
+
+  jobs:
+    - job: "JobToDemonstrateSecondJob"
+      displayName: "This is just a section to demonstrate this job"
+      
+      steps:
+      - script: echo running my scond pipeline! Hello world!
+        displayName: 'Running second script'
+
+      - script: |
+          echo this is the finish of this pipeline.
+        displayName: 'Running second script'
