@@ -11,7 +11,7 @@ pool:
 
 
 stages:
-- stage: "running pipeline"
+- stage: "runningPipeline"
   displayName: 'Microservice Build & Validation'
 
   jobs:
