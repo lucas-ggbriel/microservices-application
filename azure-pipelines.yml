@@ -28,7 +28,7 @@ stages:
         
 
 - stage: "deploying app"
-  displayName: 'Microservice Build & Validation 2'
+  displayName: 'Microservice Build & Validation'
 
   jobs:
     - job: "Jobtodemonstrate"
