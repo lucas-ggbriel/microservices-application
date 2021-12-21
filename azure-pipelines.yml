@@ -26,19 +26,3 @@ stages:
           echo echo this is the finish of this pipeline.
         displayName: 'Running second script'
         
-
-- stage: "deploying_app"
-  displayName: 'Microservice Build & Validation'
-
-  jobs:
-    - job: "Jobtodemonstrate"
-      displayName: "This is just a section to demonstrate this job"
-      
-      steps:
-      - script: echo running my first pipeline! Hello world!
-        displayName: 'Running first script'
-
-      - script: |
-          echo echo this is the finish of this pipeline.
-        displayName: 'Running second script'
-        
