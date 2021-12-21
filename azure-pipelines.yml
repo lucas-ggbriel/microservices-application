@@ -20,7 +20,7 @@ stages:
       steps:
         - task: Gradle@2
           inputs:
-            workingDirectory: 'order'
+            workingDirectory: '../order'
             gradleWrapperFile: 'gradlew.bat'
             gradleOptions: '-Xmx3072m'
             javaHomeOption: 'JDKVersion'
