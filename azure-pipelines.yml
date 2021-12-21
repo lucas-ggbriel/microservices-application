@@ -19,9 +19,10 @@ stages:
       
       steps:
         - task: Gradle@2
+          displayName: "Executing gradle command"
           inputs:
             workingDirectory: '../order'
-            gradleWrapperFile: 'gradlew.bat'
+            gradleWrapperFile: 'gradlew'
             gradleOptions: '-Xmx3072m'
             javaHomeOption: 'JDKVersion'
             jdkVersionOption: '1.8'
