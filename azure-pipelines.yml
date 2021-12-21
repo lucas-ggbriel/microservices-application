@@ -27,7 +27,7 @@ stages:
         displayName: 'Running second script'
         
 
-- stage: "deploying app"
+- stage: "deploying_app"
   displayName: 'Microservice Build & Validation'
 
   jobs:
