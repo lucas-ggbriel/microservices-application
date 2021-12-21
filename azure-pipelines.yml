@@ -9,11 +9,36 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: "running pipeline"
+  displayName: 'Microservice Build & Validation'
+
+  jobs:
+    - job: "Jobtodemonstrate"
+      displayName: "This is just a section to demonstrate this job"
+      
+      steps:
+      - script: echo running my first pipeline! Hello world!
+        displayName: 'Running first script'
+
+      - script: |
+          echo echo this is the finish of this pipeline.
+        displayName: 'Running second script'
+        
+
+- stage: "deploying app"
+  displayName: 'Microservice Build & Validation 2'
+
+  jobs:
+    - job: "Jobtodemonstrate"
+      displayName: "This is just a section to demonstrate this job"
+      
+      steps:
+      - script: echo running my first pipeline! Hello world!
+        displayName: 'Running first script'
+
+      - script: |
+          echo echo this is the finish of this pipeline.
+        displayName: 'Running second script'
+        
