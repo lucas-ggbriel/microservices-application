@@ -34,9 +34,14 @@ stages:
       displayName: "This is just a section to demonstrate this job"
       
       steps:
-      - script: echo running my scond pipeline! Hello world!
-        displayName: 'Running second script'
-
-      - script: |
-          echo this is the finish of this pipeline.
-        displayName: 'Running second script'
+        - task: Gradle@2
+          inputs:
+            workingDirectory: ''
+            gradleWrapperFile: 'gradlew'
+            gradleOptions: '-Xmx3072m'
+            javaHomeOption: 'JDKVersion'
+            jdkVersionOption: '1.8'
+            jdkArchitectureOption: 'x64'
+            publishJUnitResults: true
+            testResultsFiles: '**/TEST-*.xml'
+            tasks: 'build'
