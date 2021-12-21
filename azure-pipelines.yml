@@ -21,7 +21,7 @@ stages:
         - task: Gradle@2
           inputs:
             workingDirectory: 'order'
-            gradleWrapperFile: 'gradlew'
+            gradleWrapperFile: 'gradlew.bat'
             gradleOptions: '-Xmx3072m'
             javaHomeOption: 'JDKVersion'
             jdkVersionOption: '1.8'
